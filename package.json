@@ -6,14 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check .",
-    "lint:fix": "biome check --write .",
-    "format": "biome format --write .",
+    "lint": "biome lint src",
+    "lint:fix": "biome lint --write src",
+    "format": "biome format --write src",
     "type-check": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "dependencies": {
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
+    "husky": "^9.1.7",
     "next": "14.2.5",
     "react": "18.3.1",
     "react-dom": "18.3.1"
