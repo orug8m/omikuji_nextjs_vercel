@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Development files
+.next/
+.git/
+.gitignore
+
+# Documentation
+docs/
+README.md
+*.md
+
+# Configuration files that shouldn't be deployed
+.eslintrc.*
+.prettierrc.*
+.editorconfig
+
+# Environment files (use Vercel environment variables instead)
+.env*.local
+
+# Testing
+coverage/
+*.test.*
+*.spec.*
+
+# CI/CD
+.github/
+
+# OS files
+.DS_Store
+Thumbs.db
